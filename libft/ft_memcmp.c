@@ -29,15 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	else
 		return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
-/*
-int main()
-{
-    char *word = "t\200";
-    char *copy = "t\0";
-
-    printf("memcmp :%d \n",memcmp(copy,word,2));
-    printf("ft_memcmp :%d \n",ft_memcmp(copy,word,2));
-    //form undiffined when you don't deffin copy using the original funcion
-    //also problem in this case n > len(s1) && s1 == s2
-	//error in this case
-}*/

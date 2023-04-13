@@ -6,7 +6,7 @@
 /*   By: ohachami <ohachami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 23:48:39 by ohachami          #+#    #+#             */
-/*   Updated: 2023/03/17 23:49:50 by ohachami         ###   ########.fr       */
+/*   Updated: 2023/04/07 23:00:51 by ohachami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "fdf.h"
@@ -16,19 +16,20 @@ int	wide_count(char *line)
 	int	len;
 
 	len = 0;
+	if (!line)
+	{
+		ft_printf("No data found.\n");
+		exit(1);
+	}
 	if (*line != ' ' && *line && *line != '\n')
 		len++;
-	line++;
+	if (*line)
+		line++;
 	while (*line)
 	{
 		if (*line == ' ' && *(line + 1) != ' ' && *(line + 1))
 			len++;
 		line++;
-	}
-	if (!len)
-	{
-		ft_printf("No data found.\n");
-		exit(1);
 	}
 	return (len);
 }

@@ -42,7 +42,7 @@ void	put_point_on_map(t_map *map, t_window win, t_image *img)
 		{
 			project_p(&iso_p, p.x, p.y, map);
 			my_mlx_pixel_put(img, iso_p.x, iso_p.y,
-			map->color[p.y][p.x]);
+				map->color[p.y][p.x]);
 			if (p.x + 1 < map->wide)
 			{
 				project_p(&iso_p_adv, p.x + 1, p.y, map);
@@ -64,7 +64,7 @@ void	print_map(t_map *map)
 	t_image		img;
 
 	win.mlx_ptr = mlx_init();
-	get_windows(&win, map, &img);
+	get_window(&win, map, &img);
 	put_point_on_map(map, win, &img);
 	i = -1;
 	while (++i < map->lenght)

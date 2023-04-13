@@ -54,7 +54,7 @@ void	project_p(t_point *p, int x, int y, t_map *map)
 			- map->north + 1) * map->multi + 10;
 }
 
-void	get_windows(t_window *win, t_map *map, t_image *img)
+void	get_window(t_window *win, t_map *map, t_image *img)
 {
 	t_point	screen;
 
